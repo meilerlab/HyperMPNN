@@ -1,0 +1,25 @@
+<ROSETTASCRIPTS>
+    <RESIDUE_SELECTORS>
+        # Three chains, select from the middle one,
+        # exclude the interfaces between chain C and B/D
+        <Chain name="chainB" chains="B"/>
+        <Chain name="chainC" chains="C"/>
+        <Chain name="chainF" chains="F"/>
+
+        <InterfaceByVector name="interface_BC" cb_dist_cut="10.0" nearby_atom_cut="5.5" grp1_selector="chainB" grp2_selector="chainC"/>
+        <InterfaceByVector name="interface_BF" cb_dist_cut="10.0" nearby_atom_cut="5.5" grp1_selector="chainB" grp2_selector="chainF"/>
+        <Or name="interface" selectors="interface_BC,interface_BF"/>
+
+        # Calculate not interface
+        <Logic name="not_interface" selectors="chainB and (not interface)" />
+    </RESIDUE_SELECTORS>
+    <SIMPLE_METRICS>
+        <SelectedResiduesPyMOLMetric name="select_interface" residue_selector="not_interface" custom_type="interface_residues" />
+    </SIMPLE_METRICS>
+    <MOVERS>
+        <RunSimpleMetrics name="run_metrics" metrics="select_interface" />
+    </MOVERS>
+    <PROTOCOLS>
+        <Add mover="run_metrics"/>
+    </PROTOCOLS>
+</ROSETTASCRIPTS>
