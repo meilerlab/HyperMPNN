@@ -4,7 +4,7 @@ This repo contains the functions and methods for the paper
 
 **HyperMPNN ‒ A general strategy to design thermostable proteins learned from hyperthermophilic organisms**
 
-**LINK/DOI**
+[https://doi.org/10.1101/2024.11.26.625397](https://doi.org/10.1101/2024.11.26.625397)
 
 and is primarily intended for the reproduction of the results. Additionally the weights for the different training settings (added backbone noise) are also included in this repository under `retrained_models` and can be used with the original [ProteinMPNN](https://doi.org/10.1126/science.add2187). All credit for the architecture and training scripts goes to the authors of ProteinMPNN and we would like to take this opportunity to thank them for making everything open source and available to the general public.
 
