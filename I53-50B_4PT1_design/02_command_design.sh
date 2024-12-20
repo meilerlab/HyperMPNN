@@ -27,5 +27,5 @@ python $MPNN/protein_mpnn_run.py \
         --save_probs 1 \
         --batch_size 1 \
         --seed 1 \
-        --path_to_model_weights ../retrained_weights \
+        --path_to_model_weights ../retrained_models \
         --model_name v48_020_epoch300_hyper
