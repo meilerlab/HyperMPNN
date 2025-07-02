@@ -8,6 +8,10 @@ This repo contains the functions and methods for the paper
 
 and is primarily intended for the reproduction of the results. Additionally the **weights for the different training settings (added backbone noise) are also included in this repository under** `retrained_models` **and can be used directly with the original** [ProteinMPNN](https://doi.org/10.1126/science.add2187) ([GitLink](https://github.com/dauparas/ProteinMPNN)). All credit for the architecture and training scripts goes to the authors of ProteinMPNN and we would like to take this opportunity to thank them for making everything open source and available to the general public.
 
+> [!IMPORTANT]  
+> If you just want to use HyperMPNN you can download the model weights from [here](https://github.com/meilerlab/HyperMPNN/tree/main/retrained_models) and use the original ProteinMPNN implementation while specifying the new model weights with `--path_to_model_weights`  and  `--model_name` . An example [can be found here](https://github.com/meilerlab/HyperMPNN/blob/main/I53-50B_4PT1_design/02_command_design.sh).
+
+
 ## General structure
 
 This repository contains several folders (sections named after them) for which we give a brief overview in the next few sections. 
